@@ -6,7 +6,7 @@ verde, azul e amarelo, respectivamente.-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alterar Cor do Plano de Fundo</title>
+    <title>Alterar Papel de Parede</title>
     <style>
         body {
             display: flex;
@@ -27,17 +27,19 @@ verde, azul e amarelo, respectivamente.-->
         
     </style>
     <script>
-        function changeBackgroundColor(color) {
+        function mudarBackgroundColor(color) {
             document.body.style.backgroundColor = color;
         }
     </script>
 </head>
 <body>
     <div class="button-container">
-        <button type="button" onclick="changeBackgroundColor('red')">Vermelho</button>
-        <button type="button" onclick="changeBackgroundColor('green')">Verde</button>
-        <button type="button" onclick="changeBackgroundColor('blue')">Azul</button>
-        <button type="button" onclick="changeBackgroundColor('yellow')">Amarelo</button>
+        <h1>Altere o Papel de Parede</h1> <br><br>
+        <button type="button" onclick="mudarBackgroundColor('red')">Vermelho</button>
+        <button type="button" onclick="mudarBackgroundColor('green')">Verde</button>
+        <button type="button" onclick="mudarBackgroundColor('blue')">Azul</button>
+        <button type="button" onclick="mudarBackgroundColor('yellow')">Amarelo</button>
     </div>
 </body>
 </html>
+
