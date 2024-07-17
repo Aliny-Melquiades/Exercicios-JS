@@ -1,2 +1,91 @@
 <!--Crie um botão + (mais) e outro – (menos) na mesma página do exercício anterior. Esses botões aumentam e 
-diminuem o tamanho da fonte, respectivamente.
+diminuem o tamanho da fonte, respectivamente. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Cores de Fonte e Fundo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d5e0a2;
+        }
+        .paragraph-container {
+            max-width: 600px;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: black;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+     <script>
+        function mudarFonteCor() {
+            var paragrafo = document.getElementById('paragrafo');
+            var atualCor = paragrafo.style.color;
+
+            if (atualCor === 'black' || atualCor === '') {
+                paragrafo.style.color = 'white';
+            } else {
+                paragrafo.style.color = 'black';
+            }
+        }
+
+        function mudarCor() {
+            var paragrafo = document.getElementById('paragrafo');
+            var atualCor = paragrafo.style.backgroundColor;
+
+            if (atualCor === 'black' || atualCor === '') {
+                paragrafo.style.backgroundColor = 'white';
+            } else {
+                paragrafo.style.backgroundColor = 'black';
+            }
+        }
+
+            function aumentarFonte() {
+            var paragrafo = document.getElementById('paragrafo');
+            var atualFonte = parseFloat(window.getComputedStyle(paragrafo).fontSize);
+            paragrafo.style.fontSize = (atualFonte + 2) + 'px';
+        }
+
+        function diminuirFonte() {
+            var paragrafo = document.getElementById('paragrafo');
+            var atualFonte = parseFloat(window.getComputedStyle(paragrafo).fontSize);
+            paragrafo.style.fontSize = (atualFonte - 2) + 'px';
+        }
+    
+    </script>
+</head>
+<body>
+    <div class="paragrafo-container">
+        <p id="paragrafo">Este é um parágrafo com um texto como conteúdo.</p>
+        <div>
+            <button onclick="mudarFonteCor()">Trocar Cor da Fonte</button>
+            <button onclick="mudarCor()">Trocar Cor do Fundo</button>
+            <button onclick="aumentarFonte()">+</button>
+            <button onclick="diminuirFonte()">-</button>
+        </div>
+    </div>
+</body>
+</html>
+
