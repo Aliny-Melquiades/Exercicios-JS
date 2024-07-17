@@ -1,2 +1,49 @@
 <!-- Crie uma página com uma lista (select - RadioButton) com 4 opções de cores. Ao selecionar uma opção de cor, 
-altere o plano de fundo da página para a cor específica.
+altere o plano de fundo da página para a cor específica.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Papel de Parede</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color;
+            font-family: Arial, sans-serif;
+            text-align: center; 
+        }
+    
+        a {
+            width: 150px;
+            height: 50px;
+            margin: 07px;
+            font-size: 17px;
+            text-decoration: none;
+            color: black;
+        } 
+    </style>
+    <script>
+        function mudarBackgroundColor() {
+            var selectElement = document.getElementById('selecionarCor');
+            var selectedColor = selectElement.value;
+            document.body.style.backgroundColor = selectedColor;
+        }
+    </script>
+</head>
+<body>
+    Selecione o Tom de Azul Desejado .
+    <select id="selecionarCor" onchange="mudarBackgroundColor()">
+        <option value="white">Nenhum</option>
+        <option value="lightblue">Azul Claro</option>
+        <option value="skyblue">Azul Céu</option>
+        <option value="deepskyblue">Azul Céu Profundo</option>
+        <option value="royalblue">Azul Real</option>
+    </select>
+</body>
+</html>
+
