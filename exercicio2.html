@@ -1,1 +1,45 @@
-<!--Crie uma página com 4 links (tag <a>), cada um representando o nome de uma cor, que, utilizando o evento onmouseover altere a cor do plano de fundo para cor correspondente.
+<!--Crie uma página com 4 links (tag <a>), cada um representando o nome de uma cor, que,
+utilizando o evento onmouseover altere a cor do plano de fundo para cor correspondente.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Papel De Parede Com Links</title>
+    <style>
+
+     body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color;
+            font-family: Arial, sans-serif;
+            text-align: center; 
+        }
+    
+        a {
+            width: 150px;
+            height: 50px;
+            margin: 07px;
+            font-size: 17px;
+            text-decoration: none;
+            color: black;
+        } 
+
+    </style>
+    <script>
+        function mudarBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <h1>Passe o mouse para ver nossa paleta da cor rosa.</h1> <br><br>
+    <a href="#" onmouseover="mudarBackgroundColor('rgb(255, 182, 193)')">Light Pink</a>
+    <a href="#" onmouseover="mudarBackgroundColor('rgb(255, 105, 180)')">Hot Pink</a>
+    <a href="#" onmouseover="mudarBackgroundColor('rgb(255, 20, 147)')">Deep Pink</a>
+    <a href="#" onmouseover="mudarBackgroundColor('rgb(199, 21, 133)')">Medium Violet Red</a>
+</body>
+</html>
